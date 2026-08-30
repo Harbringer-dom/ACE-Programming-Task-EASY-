@@ -1,7 +1,15 @@
 def get_grade(marks):
-    if marks >= 90:
+    """
+    Return grade based on marks
+    A : 90-100
+    B : 70-89
+    C : below 69
+    """
+    
+
+    if 90 <= marks <= 100:
         return 'A'
-    elif marks >= 70:
+    elif 70 <= marks < 89:
         return 'B'
     else:
         return 'C'
@@ -36,7 +44,7 @@ def analyze_marks(students):
 def main():
     students = enter_students()
     highest, lowest, average, passed, failed = analyze_marks(students)
-
+    print("Student Analysis: ")
     print(f"Highest: {highest['name']} ({highest['marks']})")
     print(f"Lowest: {lowest['name']} ({lowest['marks']})")
     print(f"Average: {average}")
